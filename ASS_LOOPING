@@ -1,0 +1,819 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "{\n",
+        " \"cells\": [\n",
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"45cfa110\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Take 10 integers from keyboard using loop and print their average value on the screen.\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"#ans\"\n",
+        "   ]\n",
+        "  },\n"
+      ],
+      "metadata": {
+        "id": "5yGyKTK-ZSgQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total = 0\n",
+        "\n",
+        "for i in range(10):\n",
+        "    num = int(input(f\"Enter number {i+1}: \"))\n",
+        "    total += num\n",
+        "\n",
+        "average = total / 10\n",
+        "print(\"Average of the 10 numbers is:\", average)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "K4NLHP58aUSJ",
+        "outputId": "13f3900e-fc49-4696-a8af-967d3db73c54"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number 1: 3\n",
+            "Enter number 2: 4\n",
+            "Enter number 3: 2\n",
+            "Enter number 4: 5\n",
+            "Enter number 5: 8\n",
+            "Enter number 6: 5\n",
+            "Enter number 7: 9\n",
+            "Enter number 8: 2\n",
+            "Enter number 9: 3\n",
+            "Enter number 10: 2\n",
+            "Average of the 10 numbers is: 4.3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        " {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"f61325d0\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Print the following patterns using loop :\\n\",\n",
+        "    \"a.\\n\",\n",
+        "    \"*\\n\",\n",
+        "    \"**\\n\",\n",
+        "    \"***\\n\",\n",
+        "    \"****\\n\",\n",
+        "    \"b.\\n\",\n",
+        "    \"   *  \\n\",\n",
+        "    \" *** \\n\",\n",
+        "    \"*****\\n\",\n",
+        "    \" *** \\n\",\n",
+        "    \"   *  \\n\",\n",
+        "    \"c.\\n\",\n",
+        "    \"1010101\\n\",\n",
+        "    \" 10101 \\n\",\n",
+        "    \"  101  \\n\",\n",
+        "    \"   1   \\n\",\n",
+        "    \"    \\n\",\n",
+        "    \"# ans:\\n\",\n",
+        "    \"\\n\"\n",
+        "   ]\n",
+        "  },\n"
+      ],
+      "metadata": {
+        "id": "Sy2n5MDKaoZa"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Pattern a\n",
+        "for i in range(1, 5):\n",
+        "    print(\"*\" * i)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vfcqWtQoaqL3",
+        "outputId": "082d794f-ea7a-48d0-c802-cccbf6a8f57e"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "*\n",
+            "**\n",
+            "***\n",
+            "****\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Pattern b\n",
+        "rows = 3\n",
+        "\n",
+        "for i in range(1, rows + 1):\n",
+        "    print(\" \" * (rows - i) + \"*\" * (2 * i - 1))\n",
+        "for i in range(rows - 1, 0, -1):\n",
+        "    print(\" \" * (rows - i) + \"*\" * (2 * i - 1))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oq5f3UQhawZI",
+        "outputId": "4dcdab4d-367b-498e-bbd6-f0addb0d3471"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "  *\n",
+            " ***\n",
+            "*****\n",
+            " ***\n",
+            "  *\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Pattern c\n",
+        "rows = 4\n",
+        "for i in range(rows):\n",
+        "    print(\" \" * i, end=\"\")\n",
+        "    for j in range(2 * (rows - i) - 1):\n",
+        "        if j % 2 == 0:\n",
+        "            print(\"1\", end=\"\")\n",
+        "        else:\n",
+        "            print(\"0\", end=\"\")\n",
+        "    print()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KzRth2qCa10_",
+        "outputId": "31433940-1281-46c0-cf2d-4a1714c3151e"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1010101\n",
+            " 10101\n",
+            "  101\n",
+            "   1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"0127a928\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Print multiplication table of 24, 50 and 29 using loop.\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"#ans\"\n",
+        "   ]\n",
+        "  },"
+      ],
+      "metadata": {
+        "id": "cQZPBMdAeZvz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "numbers = [24, 50, 29]\n",
+        "\n",
+        "for num in numbers:\n",
+        "    print(f\"\\nMultiplication Table of {num}:\")\n",
+        "    for i in range(1, 11):\n",
+        "        print(f\"{num} x {i} = {num * i}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "o6HxlHHHea_o",
+        "outputId": "95f570d7-3817-4fd9-9973-22a9b33e89e1"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Multiplication Table of 24:\n",
+            "24 x 1 = 24\n",
+            "24 x 2 = 48\n",
+            "24 x 3 = 72\n",
+            "24 x 4 = 96\n",
+            "24 x 5 = 120\n",
+            "24 x 6 = 144\n",
+            "24 x 7 = 168\n",
+            "24 x 8 = 192\n",
+            "24 x 9 = 216\n",
+            "24 x 10 = 240\n",
+            "\n",
+            "Multiplication Table of 50:\n",
+            "50 x 1 = 50\n",
+            "50 x 2 = 100\n",
+            "50 x 3 = 150\n",
+            "50 x 4 = 200\n",
+            "50 x 5 = 250\n",
+            "50 x 6 = 300\n",
+            "50 x 7 = 350\n",
+            "50 x 8 = 400\n",
+            "50 x 9 = 450\n",
+            "50 x 10 = 500\n",
+            "\n",
+            "Multiplication Table of 29:\n",
+            "29 x 1 = 29\n",
+            "29 x 2 = 58\n",
+            "29 x 3 = 87\n",
+            "29 x 4 = 116\n",
+            "29 x 5 = 145\n",
+            "29 x 6 = 174\n",
+            "29 x 7 = 203\n",
+            "29 x 8 = 232\n",
+            "29 x 9 = 261\n",
+            "29 x 10 = 290\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"df8e5c52\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"#Write an infinite loop.\\n\",\n",
+        "    \"# A inifinte loop never ends. Condition is always true.\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"#ans\\n\"\n",
+        "   ]\n",
+        "  },\n"
+      ],
+      "metadata": {
+        "id": "DaTEWMJVeqt7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "while True:\n",
+        "    print(\"This is an infinite loop!\")\n"
+      ],
+      "metadata": {
+        "id": "7Ln25HrifEnB",
+        "outputId": "6069071b-506c-43b7-ac48-bfb3af2164f4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\u001b[1;30;43mStreaming output truncated to the last 5000 lines.\u001b[0m\n",
+            "This is an infinite loop!\n",
+            "This is an infinite loop!\n",
+	 ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"7ca5412c\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Factorial of any number n is represented by n! and is equal to 1*2*3*....*(n-1)*n. E.g.-\\n\",\n",
+        "    \"#4! = 1*2*3*4 = 24\\n\",\n",
+        "    \"#3! = 3*2*1 = 6\\n\",\n",
+        "    \"#2! = 2*1 = 2\\n\",\n",
+        "    \"#Also,\\n\",\n",
+        "    \"#1! = 1\\n\",\n",
+        "    \"#0! = 1\\n\",\n",
+        "    \"#Write a program to calculate factorial of a number.\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"#ans\\n\",\n",
+        "    \"\\n\"\n",
+        "   ]\n",
+        "  },\n"
+      ],
+      "metadata": {
+        "id": "VnO_VJdxfqvV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Write a program to calculate factorial of a number\n",
+        "\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "factorial = 1\n",
+        "\n",
+        "if num < 0:\n",
+        "    print(\" Factorial does not exist for negative numbers.\")\n",
+        "elif num == 0 or num == 1:\n",
+        "    print(f\"The factorial of {num} is 1\")\n",
+        "else:\n",
+        "    for i in range(1, num + 1):\n",
+        "        factorial *= i\n",
+        "    print(f\"The factorial of {num} is {factorial}\")\n"
+      ],
+      "metadata": {
+        "id": "t5pNnDIlfzPt",
+        "outputId": "6f914184-db10-4374-ca07-7b9abc7126f1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 5\n",
+            "The factorial of 5 is 120\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"dc967b88\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Take integer inputs from user until he/she presses q ( Ask to press q to quit after every integer input ). \\n\",\n",
+        "    \"# Print average and product of all numbers.\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"#ans\\n\",\n",
+        "    \"\\n\"\n",
+        "   ]\n",
+        "  },\n"
+      ],
+      "metadata": {
+        "id": "XTCz_AYNf5-K"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "numbers = []\n",
+        "\n",
+        "while True:\n",
+        "    user_input = input(\"Enter an integer (or press 'q' to quit): \")\n",
+        "    if user_input.lower() == 'q':\n",
+        "        break\n",
+        "    try:\n",
+        "        num = int(user_input)\n",
+        "        numbers.append(num)\n",
+        "    except ValueError:\n",
+        "        print(\"Please enter a valid integer.\")\n",
+        "\n",
+        "if numbers:\n",
+        "    total = sum(numbers)\n",
+        "    product = 1\n",
+        "    for n in numbers:\n",
+        "        product *= n\n",
+        "    average = total / len(numbers)\n",
+        "    print(f\"Average of numbers: {average}\")\n",
+        "    print(f\"Product of numbers: {product}\")\n",
+        "else:\n",
+        "    print(\"No numbers were entered.\")\n"
+      ],
+      "metadata": {
+        "id": "S3rhwzF1f90U",
+        "outputId": "db6d2f9d-bc18-4620-fdae-597519622f6e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter an integer (or press 'q' to quit): 5\n",
+            "Enter an integer (or press 'q' to quit): 3\n",
+            "Enter an integer (or press 'q' to quit): 6\n",
+            "Enter an integer (or press 'q' to quit): 2\n",
+            "Enter an integer (or press 'q' to quit): q\n",
+            "Average of numbers: 4.0\n",
+            "Product of numbers: 180\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        " {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"22615579\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Write a program to find greatest common divisor (GCD) or highest common factor (HCF) of given two numbers.\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"#ans\\n\"\n",
+        "   ]\n",
+        "  },"
+      ],
+      "metadata": {
+        "id": "fyRqLwCdgZLy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def hcf(a, b):\n",
+        "    while b != 0:\n",
+        "        a, b = b, a % b\n",
+        "    return a\n",
+        "\n",
+        "num1 = int(input(\"Enter first number: \"))\n",
+        "num2 = int(input(\"Enter second number: \"))\n",
+        "\n",
+        "result = hcf(num1, num2)\n",
+        "print(f\"The GCD/HCF of {num1} and {num2} is {result}\")\n"
+      ],
+      "metadata": {
+        "id": "lH8UFoOYgbTs",
+        "outputId": "c9841f1c-c5bf-4519-d931-da259da66fb7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter first number: 12\n",
+            "Enter second number: 15\n",
+            "The GCD/HCF of 12 and 15 is 3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"57112c1f\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# A three digit number is called Armstrong number if sum of cube of its digit is equal to number itself.\\n\",\n",
+        "    \"#E.g.- 153 is an Armstrong number because (13)+(53)+(33) = 153.\\n\",\n",
+        "    \"# Write all Armstrong numbers between 100 to 500.\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"#ans\\n\",\n",
+        "    \"\\n\"\n",
+        "   ]\n",
+        "  },"
+      ],
+      "metadata": {
+        "id": "125ey5oYgqmk"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "for num in range(100, 501):\n",
+        "    hundreds = num // 100\n",
+        "    tens = (num // 10) % 10\n",
+        "    units = num % 10\n",
+        "    sum_of_cubes = hundreds**3 + tens**3 + units**3\n",
+        "\n",
+        "    if num == sum_of_cubes:\n",
+        "        print(num)\n"
+      ],
+      "metadata": {
+        "id": "VyChEVbRg03p",
+        "outputId": "974ba02e-2fea-4679-ed3c-081c6b758639",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "153\n",
+            "370\n",
+            "371\n",
+            "407\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        " {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"2bae4c45\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Calculate the sum of digits of a number given by user. E.g.-\\n\",\n",
+        "    \"#INUPT : 123        OUPUT : 6\\n\",\n",
+        "    \"#INUPT : 12345        OUPUT : 15\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"# ans:\\n\",\n",
+        "    \"\\n\"\n",
+        "   ]\n",
+        "  },"
+      ],
+      "metadata": {
+        "id": "WktCesR4hEaz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "num = int(input(\"Enter a number: \"))\n",
+        "sum_of_digits = 0\n",
+        "temp = num\n",
+        "\n",
+        "while temp > 0:\n",
+        "    digit = temp % 10\n",
+        "    sum_of_digits += digit\n",
+        "    temp //= 10\n",
+        "\n",
+        "print(f\"Sum of digits of {num} is {sum_of_digits}\")\n"
+      ],
+      "metadata": {
+        "id": "MDqhW7JUhKOd",
+        "outputId": "ade450ef-6798-4fbf-d73c-3efdd02487e6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 123\n",
+            "Sum of digits of 123 is 6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"f4c4a8f4\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Write a program to find prime factor of a number.\\n\",\n",
+        "    \"# If a factor of a number is prime number then it is its prime factor.\\n\",\n",
+        "    \"\\n\"\n",
+        "   ]\n",
+        "  },\n"
+      ],
+      "metadata": {
+        "id": "ZNuqyLlRhi-6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input(\"Enter a number: \"))\n",
+        "n = num\n",
+        "factors = []\n",
+        "\n",
+        "while n % 2 == 0:\n",
+        "    factors.append(2)\n",
+        "    n //= 2\n",
+        "\n",
+        "i = 3\n",
+        "while i * i <= n:\n",
+        "    while n % i == 0:\n",
+        "        factors.append(i)\n",
+        "        n //= i\n",
+        "    i += 2\n",
+        "\n",
+        "if n > 2:\n",
+        "    factors.append(n)\n",
+        "\n",
+        "print(f\"Prime factors of {num} are: {factors}\")\n"
+      ],
+      "metadata": {
+        "id": "DOApjzENhjy3",
+        "outputId": "2ddc5c13-57ff-479c-cb37-bae6cdec71b6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 60\n",
+            "Prime factors of 60 are: [2, 2, 3, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        " {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"3e94bd2f\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Write a program to print all prime number in between 1 to 100\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"#ans\\n\",\n",
+        "    \"\\n\"\n",
+        "   ]\n",
+        "  },"
+      ],
+      "metadata": {
+        "id": "fXz5b5pUh8ej"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for num in range(2, 101):\n",
+        "    is_prime = True\n",
+        "    for i in range(2, int(num**0.5) + 1):\n",
+        "        if num % i == 0:\n",
+        "            is_prime = False\n",
+        "            break\n",
+        "    if is_prime:\n",
+        "        print(num, end=\" \")\n"
+      ],
+      "metadata": {
+        "id": "6k1C_IpAh9pT",
+        "outputId": "5c44dfc0-ded0-407d-ae5a-768859f926fa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"88f7847d\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": []\n",
+        "  }\n",
+        " ],\n",
+        " \"metadata\": {\n",
+        "  \"kernelspec\": {\n",
+        "   \"display_name\": \"Python 3 (ipykernel)\",\n",
+        "   \"language\": \"python\",\n",
+        "   \"name\": \"python3\"\n",
+        "  },\n",
+        "  \"language_info\": {\n",
+        "   \"codemirror_mode\": {\n",
+        "    \"name\": \"ipython\",\n",
+        "    \"version\": 3\n",
+        "   },\n",
+        "   \"file_extension\": \".py\",\n",
+        "   \"mimetype\": \"text/x-python\",\n",
+        "   \"name\": \"python\",\n",
+        "   \"nbconvert_exporter\": \"python\",\n",
+        "   \"pygments_lexer\": \"ipython3\",\n",
+        "   \"version\": \"3.9.13\"\n",
+        "  }\n",
+        " },\n",
+        " \"nbformat\": 4,\n",
+        " \"nbformat_minor\": 5\n",
+        "}"
+      ],
+      "metadata": {
+        "id": "ykzVOLXyiPaG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "lVb9TY1EiQ7E"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
