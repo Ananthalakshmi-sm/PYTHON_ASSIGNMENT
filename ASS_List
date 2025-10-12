@@ -1,0 +1,621 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "{\n",
+        " \"cells\": [\n",
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"93300aed\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# consider a list \\n\",\n",
+        "    \"\\n\",\n",
+        "    \"test=[\\\"This\\\",\\\"is\\\",1,\\\"list\\\"]\\n\",\n",
+        "    \"# then  test[1] will returns\\n\"\n",
+        "   ]\n",
+        "  },"
+      ],
+      "metadata": {
+        "id": "7LzgVnlwwfly"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "test = [\"This\", \"is\", 1, \"list\"]\n"
+      ],
+      "metadata": {
+        "id": "xnv-PvGpwgYL"
+      },
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(test[1])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5FOOAyxwwssV",
+        "outputId": "142f977c-9f32-4819-dc72-b0a8351b0c35"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "is\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"f1d3fdb4\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# what will be the output of following code?\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"my_list=[[\\\"A\\\",\\\"B\\\"],\\n\",\n",
+        "    \"         [\\\"X\\\",\\\"A\\\"],\\n\",\n",
+        "    \"         [\\\"B\\\",\\\"A\\\"],\\n\",\n",
+        "    \"         [\\\"A\\\",\\\"X\\\"]]\\n\",\n",
+        "    \"mylist[2][1]\"\n",
+        "   ]\n",
+        "  },"
+      ],
+      "metadata": {
+        "id": "CFbkzHzEyDb6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = [[\"A\",\"B\"],\n",
+        "           [\"X\",\"A\"],\n",
+        "           [\"B\",\"A\"],\n",
+        "           [\"A\",\"X\"]]\n",
+        "\n",
+        "print(my_list[2][1])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "z5mYkkfmyEKb",
+        "outputId": "896e8c64-0942-47aa-ddf2-f1b347af6138"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "{\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": 2,\n",
+        "   \"id\": \"f72f0ee4\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [\n",
+        "    {\n",
+        "     \"name\": \"stdout\",\n",
+        "     \"output_type\": \"stream\",\n",
+        "     \"text\": [\n",
+        "      \"True\\n\"\n",
+        "     ]\n",
+        "    }\n",
+        "   ],\n",
+        "   \"source\": [\n",
+        "    \"# what will be the output of following code?\\n\",\n",
+        "    \"a=[2,4,8,12,[4,10]]\\n\",\n",
+        "    \"print(4 in a)\"\n",
+        "   ]\n",
+        "  },"
+      ],
+      "metadata": {
+        "id": "oU155ahcyYx5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [2, 4, 8, 12, [4, 10]]\n",
+        "print(4 in a)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EhkDj9GyyZa9",
+        "outputId": "85b02ff3-26a9-4693-98d6-e45c24b8cad7"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"fbc1f309\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"#which of the following can be used to delete element 4 from the list2=[10,7,6,4,8]\"\n",
+        "   ]\n",
+        "  },"
+      ],
+      "metadata": {
+        "id": "Mfq_zfSxyxuS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list2 = [10, 7, 6, 4, 8]\n"
+      ],
+      "metadata": {
+        "id": "I-CQXaX9yyi3"
+      },
+      "execution_count": 5,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list2.remove(4)\n",
+        "print(list2)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lCNuo8JCy_AO",
+        "outputId": "ea9280d3-e20a-43a9-b762-127e3b830553"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[10, 7, 6, 8]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "del list2[3]\n",
+        "print(list2)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hOqLWq_1zBEp",
+        "outputId": "7fd8f6ac-c6d4-4ff3-8d68-f9797e545c50"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[10, 7, 6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list2.pop(2)\n",
+        "print(list2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PbIXqmsSzJRs",
+        "outputId": "6c80e004-06e1-4b10-aebd-04f04b520684"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[10, 7]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "{\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": 5,\n",
+        "   \"id\": \"dde8dcc5\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [\n",
+        "    {\n",
+        "     \"data\": {\n",
+        "      \"text/plain\": [\n",
+        "       \"(1, 1)\"\n",
+        "      ]\n",
+        "     },\n",
+        "     \"execution_count\": 5,\n",
+        "     \"metadata\": {},\n",
+        "     \"output_type\": \"execute_result\"\n",
+        "    }\n",
+        "   ],\n",
+        "   \"source\": [\n",
+        "    \"# what will be the output of following code?\\n\",\n",
+        "    \"my_tuple=((1,2,3,1),\\n\",\n",
+        "    \"          (1,1,1,2),\\n\",\n",
+        "    \"          (2,1,2,1),\\n\",\n",
+        "    \"         (1,2,1,1))\\n\",\n",
+        "    \"my_tuple[1][1:3]\"\n",
+        "   ]\n",
+        "  },\n"
+      ],
+      "metadata": {
+        "id": "5rCiifH-0m1s"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_tuple = ((1,2,3,1),\n",
+        "            (1,1,1,2),\n",
+        "            (2,1,2,1),\n",
+        "            (1,2,1,1))\n",
+        "\n",
+        "my_tuple[1][1:3]\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_vw2FrWG0owQ",
+        "outputId": "788300f2-5dd4-40b6-b92e-9bbe8d136274"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1, 1)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "{\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"2fca066e\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Take 10 integer inputs from user and store them in a list. Again ask user to give a number.\\n\",\n",
+        "    \"# Now, tell user whether that number is present in list or not.\\n\",\n",
+        "    \"# hint( Iterate over list using while loop ).\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"# ans\"\n",
+        "   ]\n",
+        "  },\n"
+      ],
+      "metadata": {
+        "id": "6r6XcqNJ02iK"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numbers = []\n",
+        "for i in range(10):\n",
+        "    while True:\n",
+        "        try:\n",
+        "            num = int(input(f\"Enter integer {i+1}: \"))\n",
+        "            numbers.append(num)\n",
+        "            break\n",
+        "        except ValueError:\n",
+        "            print(\"Please enter a valid integer.\")\n",
+        "\n",
+        "search_num = int(input(\"Enter a number to search: \"))\n",
+        "\n",
+        "i = 0\n",
+        "found = False\n",
+        "while i < len(numbers):\n",
+        "    if numbers[i] == search_num:\n",
+        "        found = True\n",
+        "        break\n",
+        "    i += 1\n",
+        "\n",
+        "if found:\n",
+        "    print(f\"{search_num} is present in the list.\")\n",
+        "else:\n",
+        "    print(f\"{search_num} is NOT present in the list.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "s2z73c7B03QA",
+        "outputId": "e6c39601-2855-4d99-e6ee-b92a07d0dec3"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter integer 1: 3\n",
+            "Enter integer 2: 5\n",
+            "Enter integer 3: 4\n",
+            "Enter integer 4: 3\n",
+            "Enter integer 5: 6\n",
+            "Enter integer 6: 7\n",
+            "Enter integer 7: 2\n",
+            "Enter integer 8: 7\n",
+            "Enter integer 9: 6\n",
+            "Enter integer 10: 2\n",
+            "Enter a number to search: 6\n",
+            "6 is present in the list.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "{\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"460d7f09\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Take 10 integer inputs from user and store them in a list. Now, copy all the elements in another list but in reverse order.\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"# ans\"\n",
+        "   ]\n",
+        "  },\n"
+      ],
+      "metadata": {
+        "id": "SbMPwkxz3bz6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "oy8w3-YN3tVP"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "original_list = []\n",
+        "for i in range(10):\n",
+        "    while True:\n",
+        "        try:\n",
+        "            num = int(input(f\"Enter integer {i+1}: \"))\n",
+        "            original_list.append(num)\n",
+        "            break\n",
+        "        except ValueError:\n",
+        "            print(\"Please enter a valid integer.\")\n",
+        "\n",
+        "reversed_list = original_list[::-1]\n",
+        "\n",
+        "print(\"Original list:\", original_list)\n",
+        "print(\"Reversed list:\", reversed_list)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_EjJ6Lx43hGF",
+        "outputId": "4681a1ea-7eba-47d6-8273-7412cbba7d54"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter integer 1: 2\n",
+            "Enter integer 2: 4\n",
+            "Enter integer 3: 3\n",
+            "Enter integer 4: 5\n",
+            "Enter integer 5: 6\n",
+            "Enter integer 6: 7\n",
+            "Enter integer 7: 1\n",
+            "Enter integer 8: 8\n",
+            "Enter integer 9: 9\n",
+            "Enter integer 10: 10\n",
+            "Original list: [2, 4, 3, 5, 6, 7, 1, 8, 9, 10]\n",
+            "Reversed list: [10, 9, 8, 1, 7, 6, 5, 3, 4, 2]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "  {\n",
+        "   \"cell_type\": \"code\",\n",
+        "   \"execution_count\": null,\n",
+        "   \"id\": \"c3d147c5\",\n",
+        "   \"metadata\": {},\n",
+        "   \"outputs\": [],\n",
+        "   \"source\": [\n",
+        "    \"# Write a program to add and multiply two 3x3 matrices.\\n\",\n",
+        "    \"\\n\",\n",
+        "    \"#ans\"\n",
+        "   ]\n",
+        "  }\n",
+        " ],\n",
+        " \"metadata\": {\n",
+        "  \"kernelspec\": {\n",
+        "   \"display_name\": \"Python 3 (ipykernel)\",\n",
+        "   \"language\": \"python\",\n",
+        "   \"name\": \"python3\"\n",
+        "  },\n",
+        "  \"language_info\": {\n",
+        "   \"codemirror_mode\": {\n",
+        "    \"name\": \"ipython\",\n",
+        "    \"version\": 3\n",
+        "   },\n",
+        "   \"file_extension\": \".py\",\n",
+        "   \"mimetype\": \"text/x-python\",\n",
+        "   \"name\": \"python\",\n",
+        "   \"nbconvert_exporter\": \"python\",\n",
+        "   \"pygments_lexer\": \"ipython3\",\n",
+        "   \"version\": \"3.9.13\"\n",
+        "  }\n",
+        " },\n",
+        " \"nbformat\": 4,\n",
+        " \"nbformat_minor\": 5\n",
+        "}\n"
+      ],
+      "metadata": {
+        "id": "6La2gV7h4KID"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Input two 3x3 matrices\n",
+        "print(\"Enter elements of first 3x3 matrix:\")\n",
+        "A = [[int(input(f\"A[{i+1}][{j+1}]: \")) for j in range(3)] for i in range(3)]\n",
+        "\n",
+        "print(\"\\nEnter elements of second 3x3 matrix:\")\n",
+        "B = [[int(input(f\"B[{i+1}][{j+1}]: \")) for j in range(3)] for i in range(3)]\n",
+        "\n",
+        "# Matrix Addition\n",
+        "sum_matrix = [[A[i][j] + B[i][j] for j in range(3)] for i in range(3)]\n",
+        "\n",
+        "# Matrix Multiplication\n",
+        "product_matrix = [[0 for j in range(3)] for i in range(3)]\n",
+        "for i in range(3):\n",
+        "    for j in range(3):\n",
+        "        for k in range(3):\n",
+        "            product_matrix[i][j] += A[i][k] * B[k][j]\n",
+        "\n",
+        "# Display results\n",
+        "print(\"\\nSum of matrices:\")\n",
+        "for row in sum_matrix:\n",
+        "    print(row)\n",
+        "\n",
+        "print(\"\\nProduct of matrices:\")\n",
+        "for row in product_matrix:\n",
+        "    print(row)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q4D_KKwH4Taf",
+        "outputId": "118a09aa-e30a-4b44-9a44-5adc9a98a84a"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter elements of first 3x3 matrix:\n",
+            "A[1][1]: 3\n",
+            "A[1][2]: 4\n",
+            "A[1][3]: 2\n",
+            "A[2][1]: 7\n",
+            "A[2][2]: 8\n",
+            "A[2][3]: 9\n",
+            "A[3][1]: 0\n",
+            "A[3][2]: 5\n",
+            "A[3][3]: 7\n",
+            "\n",
+            "Enter elements of second 3x3 matrix:\n",
+            "B[1][1]: 5\n",
+            "B[1][2]: 3\n",
+            "B[1][3]: 2\n",
+            "B[2][1]: 7\n",
+            "B[2][2]: 0\n",
+            "B[2][3]: 7\n",
+            "B[3][1]: 4\n",
+            "B[3][2]: 3\n",
+            "B[3][3]: 1\n",
+            "\n",
+            "Sum of matrices:\n",
+            "[8, 7, 4]\n",
+            "[14, 8, 16]\n",
+            "[4, 8, 8]\n",
+            "\n",
+            "Product of matrices:\n",
+            "[51, 15, 36]\n",
+            "[127, 48, 79]\n",
+            "[63, 21, 42]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
